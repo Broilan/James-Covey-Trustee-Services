@@ -1,0 +1,57 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Contact | Law Offices of James P. Covey, P.A.">
+  <h1 class="text-3xl font-bold mb-6">Contact</h1>
+
+  <div class="grid gap-10 md:grid-cols-2">
+    <section>
+      <h2 class="text-xl font-semibold mb-4">Send a Message</h2>
+      <!-- Replace action with your Formspree endpoint -->
+      <form action="https://formspree.io/f/your-id" method="POST" class="space-y-4" novalidate>
+        <div>
+          <label for="name" class="block mb-1">Full name</label>
+          <input id="name" name="name" required class="w-full rounded-lg border px-3 py-2" autocomplete="name" />
+        </div>
+        <div>
+          <label for="email" class="block mb-1">Email</label>
+          <input id="email" name="email" type="email" required class="w-full rounded-lg border px-3 py-2" autocomplete="email" />
+        </div>
+        <div>
+          <label for="phone" class="block mb-1">Phone</label>
+          <input id="phone" name="phone" inputmode="tel" class="w-full rounded-lg border px-3 py-2" autocomplete="tel" />
+        </div>
+        <div>
+          <label for="message" class="block mb-1">How can we help?</label>
+          <textarea id="message" name="message" rows="5" required class="w-full rounded-lg border px-3 py-2"></textarea>
+        </div>
+        <!-- simple honeypot -->
+        <input type="text" name="_gotcha" class="hidden" aria-hidden="true" tabindex="-1" />
+        <button class="rounded-lg px-4 py-2 border bg-zinc-900 text-white hover:bg-black">Send</button>
+      </form>
+    </section>
+
+    <section class="space-y-8">
+      <div>
+        <h2 class="text-xl font-semibold">Vero Beach Office</h2>
+        <address class="not-italic">
+          1575 Indian River Boulevard, Suite C120<br/>
+          Vero Beach, FL 32960<br/>
+          Phone: <a class="underline underline-offset-4" href="tel:+17727706160">(772) 770-6160</a><br/>
+          Fax: (772) 770-6074
+        </address>
+        <a class="inline-block mt-2 underline underline-offset-4" href="https://maps.google.com/?q=1575%20Indian%20River%20Boulevard%20Suite%20C120%20Vero%20Beach%20FL%2032960">Open in Maps</a>
+      </div>
+      <div>
+        <h2 class="text-xl font-semibold">Stuart Office</h2>
+        <address class="not-italic">
+          2207 S. Kanner Highway<br/>
+          Stuart, FL 34994<br/>
+          Phone: <a class="underline underline-offset-4" href="tel:+17722865820">(772) 286-5820</a><br/>
+          Fax: (772) 286-1505
+        </address>
+        <a class="inline-block mt-2 underline underline-offset-4" href="https://maps.google.com/?q=2207%20S.%20Kanner%20Highway%20Stuart%20FL%2034994">Open in Maps</a>
+      </div>
+    </section>
+  </div>
+</Base>

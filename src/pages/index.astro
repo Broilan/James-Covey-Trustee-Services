@@ -1,16 +1,67 @@
 ---
-
+import Base from "../layouts/Base.astro";
+const title = "James P. Covey, J.D., M.B.A. | Law Offices of James P. Covey, P.A.";
+const description = "Practical counsel and dedicated representation. Offices in Vero Beach and Stuart, Florida.";
 ---
+<Base {title} {description} canonical="https://example.com/">
+  <section class="grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
+    <div class="space-y-6">
+      <p class="inline-flex items-center gap-2 text-sm font-medium">
+        <span class="inline-block h-2.5 w-2.5 rounded-full bg-accent" aria-hidden="true"></span>
+        Licensed in Florida & Maryland
+      </p>
+      <h1 class="text-3xl md:text-4xl font-bold leading-tight">
+        Law Offices of <span class="text-brand">James P. Covey, P.A.</span>
+      </h1>
+      <p class="text-lg">
+        James P. Covey, <span class="whitespace-nowrap">J.D., M.B.A.</span><br/>
+        Practical counsel. Responsive service.
+      </p>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+      <div class="flex flex-wrap gap-3">
+        <a href="tel:+17727706160"
+           class="rounded-lg px-4 py-2 bg-brand text-white hover:bg-[--color-brand-600] transition">
+          Call Vero Beach (772) 770-6160
+        </a>
+        <a href="/contact"
+           class="rounded-lg px-4 py-2 border border-accent text-accent hover:bg-accent hover:text-white transition">
+          Contact Us
+        </a>
+      </div>
+
+      <ul class="mt-6 grid gap-2 text-sm" role="list">
+        <li class="flex items-start gap-2"><span class="mt-1 h-1.5 w-3 bg-accent" aria-hidden="true"></span> Estate planning, probate, business, and real estate matters. <!-- adjust copy --> </li>
+        <li class="flex items-start gap-2"><span class="mt-1 h-1.5 w-3 bg-accent" aria-hidden="true"></span> Two offices: Vero Beach & Stuart.</li>
+      </ul>
+    </div>
+
+    <!-- James's image -->
+<figure class="relative rounded-2xl border overflow-hidden mx-auto max-w-sm">
+  <img
+    src="/james-covey.png"
+    alt="James P. Covey smiling, wearing a light blue shirt."
+    class="block w-full h-auto object-cover"
+    width="1024" height="1551"
+    loading="eager" fetchpriority="high"
+  />
+  <figcaption class="sr-only">Attorney James P. Covey</figcaption>
+  <div class="absolute inset-x-0 bottom-0 h-1 bg-accent" aria-hidden="true"></div>
+</figure>
+  </section>
+
+  <section class="mt-16 rounded-2xl border p-6 bg-white">
+    <h2 class="text-2xl font-semibold mb-4">Offices</h2>
+    <div class="grid gap-6 sm:grid-cols-2">
+      <div>
+        <h3 class="font-medium">Vero Beach</h3>
+        <p>1575 Indian River Boulevard, Suite C120, Vero Beach, FL 32960</p>
+        <a class="underline underline-offset-4 text-brand" href="https://maps.google.com/?q=1575%20Indian%20River%20Boulevard%20Suite%20C120%20Vero%20Beach%20FL%2032960">Directions</a>
+      </div>
+      <div>
+        <h3 class="font-medium">Stuart</h3>
+        <p>2207 S. Kanner Highway, Stuart, FL 34994</p>
+        <a class="underline underline-offset-4 text-brand" href="https://maps.google.com/?q=2207%20S.%20Kanner%20Highway%20Stuart%20FL%2034994">Directions</a>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Brand tokens (hunter green + gold) */
+@theme {
+  --color-brand: #355E3B;   /* hunter green */
+  --color-accent: #B8860B;  /* gold (use for accents) */
+  --color-brand-600: #2f5335; /* darker hover */
+  --color-brand-700: #27462c; /* focus ring contrast */
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+}
+
+/* Strong, visible focus */
+:focus-visible {
+  outline: 3px solid var(--color-brand-700);
+  outline-offset: 3px;
+}
+
+/* Motion respect */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+.prose { max-width: 70ch; }

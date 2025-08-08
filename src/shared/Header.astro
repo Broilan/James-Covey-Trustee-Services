@@ -1,0 +1,30 @@
+---
+const nav = [
+  { href: "/", label: "Home" },
+  { href: "/staff", label: "Team" },
+  { href: "/contact", label: "Contact" },
+];
+---
+<header class="border-b">
+  <!-- Thin accent bar -->
+  <div class="h-1 w-full bg-accent"></div>
+
+  <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-4">
+    <a href="/" class="text-xl font-semibold tracking-tight">
+      <span class="text-brand">Law Offices of</span> James P. Covey, P.A.
+    </a>
+
+    <nav aria-label="Primary">
+      <ul class="flex gap-6">
+        {nav.map(i => (
+          <li><a class="hover:underline underline-offset-4" href={i.href}>{i.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <a href="tel:+17727706160"
+       class="hidden sm:inline-flex rounded-lg px-3 py-2 border border-accent text-accent hover:bg-accent hover:text-white transition">
+      Call (772) 770-6160
+    </a>
+  </div>
+</header>

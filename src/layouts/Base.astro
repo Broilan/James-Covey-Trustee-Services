@@ -1,0 +1,55 @@
+---
+const { title = "Law Offices of James P. Covey, P.A.", description = "James P. Covey, J.D., M.B.A. — Licensed to practice in Florida and Maryland.", canonical } = Astro.props;
+
+const org = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Law Offices of James P. Covey, P.A.",
+  "url": "https://example.com", // TODO: set your real domain
+  "founder": { "@type": "Person", "name": "James P. Covey, J.D., M.B.A." },
+  "areaServed": ["Florida","Maryland"],
+  "image": "https://example.com/og.jpg",
+  "telephone": "+1-772-770-6160",
+  "sameAs": [], // add Google/Avvo/etc. URLs
+  "address": [{
+    "@type": "PostalAddress",
+    "streetAddress": "1575 Indian River Boulevard, Suite C120",
+    "addressLocality": "Vero Beach",
+    "addressRegion": "FL",
+    "postalCode": "32960",
+    "telephone": "+1-772-770-6160"
+  },{
+    "@type": "PostalAddress",
+    "streetAddress": "2207 S. Kanner Highway",
+    "addressLocality": "Stuart",
+    "addressRegion": "FL",
+    "postalCode": "34994",
+    "telephone": "+1-772-286-5820"
+  }]
+};
+import Header from "../shared/Header.astro";
+import Footer from "../shared/Footer.astro";
+import "../styles/tailwind.css";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <meta name="theme-color" content="#ffffff" />
+    <script type="application/ld+json">
+      {JSON.stringify(org)}
+    </script>
+  </head>
+  <body class="min-h-dvh bg-white text-zinc-900 font-sans antialiased">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-white px-3 py-2 rounded shadow">Skip to main content</a>
+    <Header />
+    <main id="main" class="mx-auto w-full max-w-6xl px-4 py-10">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
