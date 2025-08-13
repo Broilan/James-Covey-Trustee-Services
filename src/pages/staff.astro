@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+
 const staff = [
   { name: "Robyn Haffield", role: "Senior Paralegal & Firm Manager" },
   { name: "Melanie Kelhoffer", role: "Senior Paralegal" },
@@ -11,6 +12,12 @@ const staff = [
   { name: "Lorraine Szappan", role: "Client Support Services" },
   { name: "Rodney Black", role: "Client Support Services" },
 ];
+
+// Function to turn first name into email
+function emailFromName(fullName) {
+  const firstName = fullName.split(" ")[0].toLowerCase();
+  return `${firstName}@jcoveylaw.com`;
+}
 ---
 <Base title="Our Team | Law Offices of James P. Covey, P.A.">
   <h1 class="text-3xl font-bold mb-6">Our Team</h1>
@@ -19,6 +26,12 @@ const staff = [
       <li class="border rounded-xl p-4 bg-white">
         <h2 class="font-semibold text-brand">{m.name}</h2>
         <p class="text-zinc-700">{m.role}</p>
+        <p class="mt-1 text-sm">
+          <a class="underline underline-offset-4 text-accent hover:text-brand"
+             href={`mailto:${emailFromName(m.name)}`}>
+            {emailFromName(m.name)}
+          </a>
+        </p>
       </li>
     ))}
   </ul>
