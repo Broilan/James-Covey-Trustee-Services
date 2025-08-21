@@ -1,10 +1,12 @@
 ---
 import Base from "../layouts/Base.astro";
-const title = "About James P. Covey, J.D., M.B.A. | Law Offices of James P. Covey, P.A.";
-const description = "Learn about attorney James Prescott Covey (Jim) — education, admissions, practice areas, and services across the Treasure Coast and beyond.";
+const title =
+  "About James P. Covey, J.D., M.B.A. | Law Offices of James P. Covey, P.A.";
+const description =
+  "Learn about attorney James Prescott Covey (Jim) — education, admissions, practice areas, and services across the Treasure Coast and beyond.";
 ---
 <Base {title} {description} canonical="https://example.com/about">
-  <header class="mb-8">
+  <header class="mb-10">
     <p class="text-sm font-medium inline-flex items-center gap-2">
       <span class="inline-block h-2.5 w-2.5 rounded-full bg-accent" aria-hidden="true"></span>
       About Our Attorney
@@ -12,57 +14,86 @@ const description = "Learn about attorney James Prescott Covey (Jim) — educati
     <h1 class="text-3xl md:text-4xl font-bold font-serif mt-2">
       James Prescott Covey, J.D., M.B.A.
     </h1>
-    <p class="text-zinc-700">Serving Indian River, St. Lucie, Martin, Okeechobee, and Palm Beach counties for more than thirty-four (34) years.</p>
+    <p class="text-zinc-700">
+      Serving Indian River, St. Lucie, Martin, Okeechobee, and Palm Beach counties for more than
+      thirty-four (34) years.
+    </p>
   </header>
 
-  <div class="grid gap-8 md:grid-cols-[1fr_320px]">
+  <div class="grid gap-10 md:grid-cols-[1fr_320px] items-start">
     <!-- Main content -->
     <article class="prose">
-      <p><strong>James Prescott Covey (Jim)</strong> is an attorney who has been serving the communities of Indian River, St. Lucie, Martin, Okeechobee and Palm Beach counties for more than thirty four (34) years.</p>
+      <p>
+        <strong>James Prescott Covey (Jim)</strong> is an attorney who has been serving the communities of
+        Indian River, St. Lucie, Martin, Okeechobee, and Palm Beach counties for more than thirty-four (34) years.
+      </p>
 
-      <h2 class="font-serif">Education</h2>
-      <ul>
+      <h2 class="font-serif mt-10">Education</h2>
+      <ul class="list-disc pl-5">
         <li><strong>University of Maryland</strong> — B.S. in Finance (1986) and B.S. in Business Management (1986)</li>
         <li><strong>University of Baltimore</strong> — M.B.A. in Finance (1989) and Juris Doctor (J.D.) (1989)</li>
       </ul>
 
-      <h2 class="font-serif">Admissions</h2>
-      <p>Jim is currently licensed to practice law in <strong>Maryland</strong> and <strong>Florida</strong> and formerly with the Federal District Courts of Florida.</p>
+      <h2 class="font-serif mt-10">Admissions</h2>
+      <p>
+        Jim is currently licensed to practice law in <strong>Maryland</strong> and <strong>Florida</strong> and formerly with
+        the Federal District Courts of Florida.
+      </p>
 
-      <h2 class="font-serif">Approach & Team</h2>
-      <p>Jim and his terrific staff of eleven focus on providing high-quality service to each client while keeping every experience personal to the client’s needs.</p>
+      <h2 class="font-serif mt-10">Approach &amp; Team</h2>
+      <p>
+        Jim and his terrific staff of eleven focus on providing high-quality service to each client while
+        keeping every experience personal to the client’s needs.
+      </p>
 
-      <h2 class="font-serif">Primary Practice Areas</h2>
-      <ol>
+      <h2 class="font-serif mt-10">Primary Practice Areas</h2>
+      <ol class="list-decimal pl-5 space-y-1">
         <li><strong>Wills and Trusts</strong> (estate planning)</li>
         <li><strong>Real Estate</strong> matters</li>
         <li><strong>Contract</strong> matters</li>
         <li><strong>Guardianship law</strong> (protection of incapacitated persons at risk of exploitation or injury due to lack of sound mind)</li>
-        <li><strong>Estate & Trust administration</strong> — legal advice, tax planning and tax preparation services, and when needed aggressive litigation in this area of law</li>
+        <li><strong>Estate &amp; Trust administration</strong> — legal advice, tax planning and tax preparation services, and when needed aggressive litigation in this area of law</li>
       </ol>
 
-      <h2 class="font-serif">Additional Services</h2>
-      <p>In addition, the legal and trust services offices provide accounting services, tax analysis services (to save money when possible), bill payment services, and real estate management services to individual and corporate clients.</p>
+      <h2 class="font-serif mt-10">Additional Services</h2>
+      <p>
+        In addition, the legal and trust services offices provide accounting services, tax analysis services
+        (to save money when possible), bill payment services, and real estate management services to individual
+        and corporate clients.
+      </p>
 
-      <h2 class="font-serif">Offices</h2>
-      <ul>
+      <h2 class="font-serif mt-10">Offices</h2>
+      <ul class="list-disc pl-5">
         <li>Vero Beach, Florida</li>
         <li>Stuart, Florida</li>
+        <li>Boone, North Carolina</li>
       </ul>
-      <p>Frequently, Jim provides “house calls” to clients as a matter of convenience in Florida and across the United States.</p>
+      <p>
+        Frequently, Jim provides “house calls” to clients as a matter of convenience in Florida and across
+        the United States.
+      </p>
 
-      <h2 class="font-serif">Fiduciary Roles</h2>
-      <p>Separate from the law office, Jim proudly serves in the legal capacity as Personal Representative or Trustee for a limited number of families who find comfort in having a professional ensure that estate plans are implemented and legal protections are available to beneficiaries regardless of age or mental health.</p>
+      <h2 class="font-serif mt-10">Fiduciary Roles</h2>
+      <p>
+        Separate from the law office, Jim proudly serves in the legal capacity as Personal Representative
+        or Trustee for a limited number of families who find comfort in having a professional ensure that
+        estate plans are implemented and legal protections are available to beneficiaries regardless of age
+        or mental health.
+      </p>
 
-      <p>Jim has previously served as attorney for numerous trust fiduciaries (as reflected in public records), including but not limited to: Northern Trust, Bank of America, N.A., Merrill Lynch Trust Company, Wells Fargo Trust Advisors, PNC Bank, SunTrust Bank, MM&amp;T Bank, and others.</p>
+      <p>
+        Jim has previously served as attorney for numerous trust fiduciaries (as reflected in public records),
+        including but not limited to: Northern Trust, Bank of America, N.A., Merrill Lynch Trust Company,
+        Wells Fargo Trust Advisors, PNC Bank, SunTrust Bank, MM&amp;T Bank, and others.
+      </p>
 
-      <h2 class="font-serif">Trustee Services Offices</h2>
-      <ul>
+      <h2 class="font-serif mt-10">Trustee Services Offices</h2>
+      <ul class="list-disc pl-5">
         <li>Port St. Lucie, Florida</li>
         <li>Boone, North Carolina*</li>
       </ul>
 
-      <!-- Person schema (optional but good for SEO) -->
+      <!-- Person schema (SEO) -->
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
@@ -79,10 +110,27 @@ const description = "Learn about attorney James Prescott Covey (Jim) — educati
             { "@type": "EducationalOccupationalCredential", "credentialCategory": "Juris Doctor" },
             { "@type": "EducationalOccupationalCredential", "credentialCategory": "MBA (Finance)" }
           ],
-          "knowsAbout": ["Estate Planning","Trusts","Real Estate","Contracts","Guardianship","Estate & Trust Administration"],
-          "image": "https://example.com/james-covey.jpg" // update to your real URL
+          "knowsAbout": [
+            "Estate Planning","Trusts","Real Estate","Contracts","Guardianship","Estate & Trust Administration"
+          ],
+          "image": "https://example.com/james-covey.jpg" // TODO: update to your real URL
         })}
       </script>
     </article>
+
+    <!-- Sidebar portrait -->
+    <aside class="md:pl-2">
+      <figure class="rounded-2xl border overflow-hidden mx-auto max-w-xs sm:max-w-sm">
+        <img
+          src="/james-covey.jpg"
+          alt="Attorney James P. Covey"
+          class="block w-full h-auto object-cover"
+          width="1024" height="1551"
+          loading="lazy"
+        />
+        <figcaption class="sr-only">Portrait of James P. Covey</figcaption>
+        <div class="h-1 w-full bg-accent" aria-hidden="true"></div>
+      </figure>
+    </aside>
   </div>
 </Base>
