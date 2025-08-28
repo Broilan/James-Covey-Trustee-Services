@@ -1,67 +1,119 @@
 ---
 import Base from "../layouts/Base.astro";
 const title = "James P. Covey, J.D., M.B.A.";
-const description = "Offices in Vero Beach, Florida, Stuart, Floirda, and Boone, North Carolina.";
+const description = "Offices in Vero Beach, Florida, Stuart, Florida, and Boone, North Carolina.";
 ---
+
 <Base {title} {description} canonical="https://example.com/">
-  <section class="grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
-    <div class="space-y-6">
-      <p class="inline-flex items-center gap-2 text-sm font-medium">
-        <span class="inline-block h-2.5 w-2.5 rounded-full bg-accent" aria-hidden="true"></span>
-        Licensed in Florida & Maryland
-      </p>
-      <h1 class="text-3xl md:text-4xl font-bold leading-tight">
-        <span class="text-brand">James P. Covey, J.D., M.B.A.</span>
+  <style is:global>
+    :root{
+      --banner:#0f2f24; /* deep hunter */
+      --accent:#d4af37; /* gold */
+    }
+    .banner{position:relative; display:inline-block; transform:skewX(-8deg); background:var(--banner); color:#fff; padding:.5rem 1rem; box-shadow:0 6px 14px rgb(0 0 0 / .25)}
+    .banner > span{display:block; transform:skewX(8deg); letter-spacing:.04em}
+    .ribbon:after{content: ""; position:absolute; right:-28px; top:0; bottom:0; width:28px; background:var(--banner); transform:skewX(25deg)}
+    .bullets li{display:list-item; list-style:disc; margin-left:1.25rem}
+    .tri{width:0;height:0;border-left:14px solid transparent;border-right:14px solid transparent;border-top:18px solid var(--banner)}
+  </style>
+
+  <section class="mx-auto grid max-w-6xl gap-8 px-4 py-10 md:grid-cols-[0.9fr_1.1fr]">
+    <!-- LEFT COLUMN -->
+    <div>
+      <figure class="relative mb-6 max-w-sm overflow-hidden rounded border shadow-sm">
+        <img src="/james-covey.jpg" alt="James P. Covey portrait" class="block w-full object-cover" width="1024" height="1551" />
+      </figure>
+
+      <h1 class="mb-4 font-bold tracking-wide text-neutral-900">
+        <span class="block text-xl md:text-2xl">JAMES P. COVEY, J.D.,</span>
+        <span class="block text-xl md:text-2xl">M.B.A.</span>
       </h1>
-      <h1>Trustee-Concierge Services</h1>
 
-<div class="flex flex-wrap gap-3">
-  <a href="tel:+1774535301"
-     class="rounded-lg px-4 py-2 bg-brand text-white hover:bg-[--color-brand-600] transition">
-    Call Jim (772) 453-5301
-  <a href="/contact"
-     class="rounded-lg px-4 py-2 border border-accent text-accent hover:bg-accent hover:text-white transition">
-    Contact Us
-  </a>
-  <a href="/about"
-     class="rounded-lg px-4 py-2 border border-brand text-brand hover:bg-brand hover:text-white transition">
-    Learn More About Jim
-  </a>
-</div>
+      <h2 class="mb-2 text-sm font-semibold tracking-wider text-neutral-700">PROFILE</h2>
+      <div class="space-y-3 text-sm leading-relaxed text-neutral-700">
+        <p>Attorney who has been serving the communities of Indian River, St. Lucie, Martin and Palm Beach Counties for more than thirty‑four (34) years.</p>
+        <p>Licensed to practice law in Florida and Maryland.</p>
+        <p>Frequently provides “house calls” to his clients as a matter of convenience in the State of Florida and across the United States.</p>
+      </div>
 
+      <div class="mt-6 h-px bg-neutral-200"></div>
 
-      <ul class="mt-6 grid gap-2 text-sm" role="list">
-        <li class="flex items-start gap-2"><span class="mt-1 h-1.5 w-3 bg-accent" aria-hidden="true"></span> Three offices: Vero Beach, Florida, Stuart, Florida, and Boone, North Carolina.</li>
-      </ul>
+      <h2 class="mt-6 text-xl font-semibold tracking-wider text-neutral-700 underline">CONTACT</h2>
+      <dl class="mt-2 space-y-3 text-sm">
+        <div>
+          <dt class="font-medium">PHONE:</dt>
+          <dd><a class="text-brand underline underline-offset-4" href="tel:+17727706160">772.772.0.6160</a></dd>
+        </div>
+        <div>
+          <dt class="font-medium">EMAIL:</dt>
+          <dd><a class="underline underline-offset-4" href="mailto:office@jcoveylaw.com">office@jcoveylaw.com</a></dd>
+        </div>
+      </dl>
+
+      <div class="mt-4 space-y-4 text-sm">
+        <div>
+          <h3 class="font-medium">Vero Beach Office:</h3>
+          <p>1575 Indian River Boulevard, Suite C‑120<br/>Vero Beach, FL 32960</p>
+          <a class="text-brand underline underline-offset-4" href="https://maps.google.com/?q=1575%20Indian%20River%20Boulevard%20Suite%20C120%20Vero%20Beach%20FL%2032960">Directions</a>
+        </div>
+        <div>
+          <h3 class="font-medium">Stuart Office:</h3>
+          <p>2207 S. Kanner Highway<br/>Stuart, Florida 34994</p>
+          <a class="text-brand underline underline-offset-4" href="https://maps.google.com/?q=2207%20S.%20Kanner%20Highway%20Stuart%20FL%2034994">Directions</a>
+        </div>
+      </div>
     </div>
 
-    <!-- James's image -->
-<figure class="relative rounded-2xl border overflow-hidden mx-auto max-w-sm">
-  <img
-    src="/james-covey.jpg"
-    alt="James P. Covey smiling, wearing a light blue shirt."
-    class="block w-full h-auto object-cover"
-    width="1024" height="1551"
-    loading="eager" fetchpriority="high"
-  />
-  <figcaption class="sr-only">Attorney James P. Covey</figcaption>
-  <div class="absolute inset-x-0 bottom-0 h-1 bg-accent" aria-hidden="true"></div>
-</figure>
-  </section>
+    <!-- RIGHT COLUMN -->
+    <div class="space-y-10">
+      <!-- EDUCATION -->
+      <section>
+        <div class="banner ribbon"><span>EDUCATION</span></div>
+        <div class="mt-4 space-y-5 text-[15px] leading-6">
+          <div>
+            <p class="font-medium underline">University of Baltimore</p>
+            <p class="text-neutral-700">1989<br/>Juris Doctor Law Degree</p>
+          </div>
+          <div>
+            <p class="font-medium underline">University of Baltimore</p>
+            <p class="text-neutral-700">1989<br/>Master of Business Administration Degree</p>
+          </div>
+          <div>
+            <p class="font-medium underline">University of Maryland</p>
+            <p class="text-neutral-700">1986<br/>Bachelor of Science Business Management Degree</p>
+          </div>
+          <div>
+            <p class="font-medium underline">University of Maryland</p>
+            <p class="text-neutral-700">1986<br/>Bachelor of Science Finance Degree</p>
+          </div>
+        </div>
+      </section>
 
-  <section class="mt-16 rounded-2xl border p-6 bg-white">
-    <h2 class="text-2xl font-semibold mb-4">Offices</h2>
-    <div class="grid gap-6 sm:grid-cols-2">
-      <div>
-        <h3 class="font-medium">Vero Beach</h3>
-        <p>1575 Indian River Boulevard, Suite C120, Vero Beach, FL 32960</p>
-        <a class="underline underline-offset-4 text-brand" href="https://maps.google.com/?q=1575%20Indian%20River%20Boulevard%20Suite%20C120%20Vero%20Beach%20FL%2032960">Directions</a>
-      </div>
-      <div>
-        <h3 class="font-medium">Stuart</h3>
-        <p>2207 S. Kanner Highway, Stuart, FL 34994</p>
-        <a class="underline underline-offset-4 text-brand" href="https://maps.google.com/?q=2207%20S.%20Kanner%20Highway%20Stuart%20FL%2034994">Directions</a>
-      </div>
+      <!-- PRACTICE AREAS -->
+      <section>
+        <div class="banner ribbon"><span>PRACTICE AREAS</span></div>
+        <ul class="bullets mt-4 space-y-1 text-[15px] leading-6">
+          <li>Wills and Trust (estate planning);</li>
+          <li>Real estate matters;</li>
+          <li>Contract matters;</li>
+          <li>Guardianship law (protection of incapacitated persons at risk of exploitation or injury due to lack of sound mind);</li>
+          <li>Estate and Trust administration, legal advice, tax planning and tax preparation services and when needed aggressive litigation work in law;</li>
+          <li>Accounting services;</li>
+          <li>Tax analysis;</li>
+          <li>Bill payment services; and</li>
+          <li>Real estate management services.</li>
+        </ul>
+      </section>
+
+      <!-- ADDITIONAL SERVICES PROVIDED -->
+      <section>
+        <div class="banner ribbon"><span>ADDITIONAL SERVICES PROVIDED</span></div>
+        <ul class="bullets mt-4 space-y-1 text-[15px] leading-6">
+          <li>Serves as Personal Representative;</li>
+          <li>Serves as Trustee, Co‑Trustee, and Successor Trustee;</li>
+          <li>Provides Trust clients with 24/7 text and voice mail access to Trustee and Trust Administration Assistant.</li>
+        </ul>
+      </section>
     </div>
   </section>
 </Base>
