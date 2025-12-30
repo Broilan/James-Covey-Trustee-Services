@@ -1,30 +1,75 @@
 ---
 const nav = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },  // ← add this
+  { href: "/about", label: "About" },
   { href: "/staff", label: "Team" },
   { href: "/contact", label: "Contact" },
 ];
 ---
+
 <header class="border-b">
-  <!-- Thin accent bar -->
+  <!-- Accent bar -->
   <div class="h-1 w-full bg-accent"></div>
 
-  <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-4">
-    <a href="/" class="text-xl font-semibold tracking-tight">
-      <span class="text-brand">Law Offices of</span> James P. Covey, P.A.
+  <div class="mx-auto max-w-7xl px-4 py-3 sm:py-4 flex items-center justify-between gap-4">
+    
+    {/* Brand */}
+    <a
+      href="/"
+      class="flex items-center gap-3 min-w-0"
+    >
+    <img
+    src="/JPC-1.png"
+    alt="JPC logo"
+    class="
+      h-10 sm:h-12 md:h-14 lg:h-16
+      w-auto
+      shrink-0
+      object-contain
+    "
+  />  
+
+      <span class="min-w-0 leading-tight">
+        <span class="block text-xs sm:text-sm font-normal text-brand truncate">
+          Law Offices of
+        </span>
+        <span class="block text-sm sm:text-base font-semibold truncate">
+          James P. Covey, P.A.
+        </span>
+      </span>
     </a>
 
-    <nav aria-label="Primary">
-      <ul class="flex gap-6">
+    {/* Navigation */}
+    <nav aria-label="Primary" class="hidden md:block">
+      <ul class="flex gap-6 text-sm font-medium">
         {nav.map(i => (
-          <li><a class="hover:underline underline-offset-4" href={i.href}>{i.label}</a></li>
+          <li>
+            <a
+              href={i.href}
+              class="hover:underline underline-offset-4"
+            >
+              {i.label}
+            </a>
+          </li>
         ))}
       </ul>
     </nav>
 
-    <a href="tel:+17727706160"
-       class="hidden sm:inline-flex rounded-lg px-3 py-2 border border-accent text-accent hover:bg-accent hover:text-white transition">
+    {/* Call button */}
+    <a
+      href="tel:+17727706160"
+      class="
+        hidden sm:inline-flex
+        text-sm
+        rounded-lg
+        px-3 py-2
+        border border-accent
+        text-accent
+        hover:bg-accent hover:text-white
+        transition
+        whitespace-nowrap
+      "
+    >
       Call (772) 770-6160
     </a>
   </div>
